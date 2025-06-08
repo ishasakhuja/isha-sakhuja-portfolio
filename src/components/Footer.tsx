@@ -1,24 +1,23 @@
-
-import React from 'react';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import React from "react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   const socialLinks = [
     {
       icon: <Github className="w-5 h-5" />,
       href: "https://github.com/ishasakhuja",
-      label: "GitHub"
+      label: "GitHub",
     },
     {
       icon: <Linkedin className="w-5 h-5" />,
       href: "https://linkedin.com/in/ishasakhuja",
-      label: "LinkedIn"
+      label: "LinkedIn",
     },
     {
       icon: <Mail className="w-5 h-5" />,
       href: "mailto:ishasakhujaa@gmail.com",
-      label: "Email"
-    }
+      label: "Email",
+    },
   ];
 
   return (
@@ -29,7 +28,9 @@ const Footer = () => {
             <div className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text text-transparent mb-2">
               Isha Sakhuja
             </div>
-            <p className="text-muted-foreground">© 2025 – All rights reserved.</p>
+            <p className="text-muted-foreground">
+              © 2025 – All rights reserved.
+            </p>
           </div>
 
           <div className="flex items-center space-x-6">
@@ -50,7 +51,7 @@ const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-border/50 text-center">
           <p className="text-sm text-muted-foreground">
-            Built with 💻 by Isha • Crafted with React, TypeScript & Tailwind CSS
+            Crafted with React, TypeScript & Tailwind CSS
           </p>
         </div>
       </div>

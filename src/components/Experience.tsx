@@ -1,6 +1,6 @@
-
-import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Briefcase, GraduationCap } from "lucide-react";
 
 const Experience = () => {
   const experiences = [
@@ -8,16 +8,16 @@ const Experience = () => {
       title: "Software Development Intern",
       company: "Sharda Tech",
       period: "Jan 2025 – Present",
-      description: "Built dashboard modules, managed data sync between admin panel and frontend (Next.js + MongoDB), led UI/UX revamps.",
-      type: "work"
+      description:
+        "Built dashboard modules, managed data sync between admin panel and frontend (Next.js + MongoDB), led UI/UX revamps.",
     },
     {
       title: "President",
       company: "Technova Society",
       period: "2024 – Present",
-      description: "Leading 55+ students, organizing hackathons and workshops, driving innovation among 2500+ university students.",
-      type: "leadership"
-    }
+      description:
+        "Leading 55+ students, organizing hackathons and workshops, driving innovation among 2500+ university students.",
+    },
   ];
 
   const education = [
@@ -25,81 +25,95 @@ const Experience = () => {
       title: "B.Tech Computer Science Engineering",
       institution: "Sharda University",
       period: "2022 – Present",
-      details: "CGPA: 9.5",
-      achievement: "100% Academic Scholarship"
+      details: "CGPA: 9.41",
+      achievement: "100% Academic Scholarship",
     },
     {
       title: "Class XII",
       institution: "Secondary Education",
       period: "2022",
-      details: "98.2%"
+      details: "98.2%",
     },
     {
       title: "Class X",
-      institution: "Secondary Education", 
+      institution: "Secondary Education",
       period: "2020",
-      details: "97.6%"
-    }
+      details: "97.6%",
+    },
   ];
 
   return (
     <section className="py-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-sm uppercase tracking-widest text-blue-500 font-semibold mb-2">Experience</h2>
-          <h3 className="text-4xl font-bold mb-6">Professional Journey</h3>
+          <h2 className="text-sm uppercase tracking-wide text-blue-500 font-semibold mb-2">
+            Experience
+          </h2>
+          <h3 className="text-4xl font-bold">Professional Journey</h3>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Experience Timeline */}
+          {/* Experience Section */}
           <div>
-            <h4 className="text-2xl font-semibold mb-8 flex items-center">
-              <div className="w-4 h-4 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 mr-3" />
-              Work Experience & Leadership
+            <h4 className="text-xl font-semibold mb-6 flex items-center gap-2 text-blue-600">
+              <Briefcase size={20} />
+              Work & Leadership
             </h4>
             <div className="space-y-6">
               {experiences.map((exp, index) => (
-                <Card key={index} className="border-border/50 bg-card/50 hover:bg-card/80 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start justify-between mb-4">
+                <Card
+                  key={index}
+                  className="bg-white/80 dark:bg-card border border-border/30 hover:shadow-md transition-all"
+                >
+                  <CardContent className="p-5">
+                    <div className="flex items-start justify-between mb-2">
                       <div>
-                        <h5 className="text-lg font-semibold text-foreground">{exp.title}</h5>
-                        <p className="text-blue-500 font-medium">{exp.company}</p>
+                        <h5 className="text-base font-semibold">{exp.title}</h5>
+                        <p className="text-sm text-blue-500">{exp.company}</p>
                       </div>
-                      <span className="text-sm text-muted-foreground bg-background/50 px-3 py-1 rounded-full">
+                      <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded-full">
                         {exp.period}
                       </span>
                     </div>
-                    <p className="text-muted-foreground leading-relaxed">{exp.description}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {exp.description}
+                    </p>
                   </CardContent>
                 </Card>
               ))}
             </div>
           </div>
 
-          {/* Education Timeline */}
+          {/* Education Section */}
           <div>
-            <h4 className="text-2xl font-semibold mb-8 flex items-center">
-              <div className="w-4 h-4 rounded-full bg-gradient-to-r from-violet-500 to-purple-500 mr-3" />
+            <h4 className="text-xl font-semibold mb-6 flex items-center gap-2 text-violet-600">
+              <GraduationCap size={20} />
               Education & Achievements
             </h4>
             <div className="space-y-6">
               {education.map((edu, index) => (
-                <Card key={index} className="border-border/50 bg-card/50 hover:bg-card/80 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start justify-between mb-4">
+                <Card
+                  key={index}
+                  className="bg-white/80 dark:bg-card border border-border/30 hover:shadow-md transition-all"
+                >
+                  <CardContent className="p-5">
+                    <div className="flex items-start justify-between mb-2">
                       <div>
-                        <h5 className="text-lg font-semibold text-foreground">{edu.title}</h5>
-                        <p className="text-violet-500 font-medium">{edu.institution}</p>
+                        <h5 className="text-base font-semibold">{edu.title}</h5>
+                        <p className="text-sm text-violet-500">
+                          {edu.institution}
+                        </p>
                       </div>
-                      <span className="text-sm text-muted-foreground bg-background/50 px-3 py-1 rounded-full">
+                      <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded-full">
                         {edu.period}
                       </span>
                     </div>
-                    <div className="flex items-center justify-between">
-                      <p className="text-muted-foreground">{edu.details}</p>
+                    <div className="flex justify-between items-center">
+                      <p className="text-sm text-muted-foreground">
+                        {edu.details}
+                      </p>
                       {edu.achievement && (
-                        <span className="text-xs bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full">
+                        <span className="text-xs bg-yellow-400/90 text-white px-2 py-0.5 rounded-full font-medium">
                           {edu.achievement}
                         </span>
                       )}

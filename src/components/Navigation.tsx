@@ -1,7 +1,6 @@
-
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Moon, Sun } from 'lucide-react';
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Moon, Sun } from "lucide-react";
 
 interface NavigationProps {
   isDarkMode: boolean;
@@ -11,44 +10,44 @@ interface NavigationProps {
 const Navigation = ({ isDarkMode, toggleDarkMode }: NavigationProps) => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text text-transparent">
-            IS
+          <div>
+            <img className="w-9 rounded-full" src="/Logo.png" />
           </div>
-          
+
           <div className="hidden md:flex items-center space-x-8">
-            <button 
-              onClick={() => scrollToSection('home')}
+            <button
+              onClick={() => scrollToSection("home")}
               className="text-foreground/80 hover:text-foreground transition-colors"
             >
               Home
             </button>
-            <button 
-              onClick={() => scrollToSection('about')}
+            <button
+              onClick={() => scrollToSection("about")}
               className="text-foreground/80 hover:text-foreground transition-colors"
             >
               About
             </button>
-            <button 
-              onClick={() => scrollToSection('portfolio')}
+            <button
+              onClick={() => scrollToSection("portfolio")}
               className="text-foreground/80 hover:text-foreground transition-colors"
             >
               Portfolio
             </button>
-            <button 
-              onClick={() => scrollToSection('services')}
+            <button
+              onClick={() => scrollToSection("services")}
               className="text-foreground/80 hover:text-foreground transition-colors"
             >
               Services
             </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
+            <button
+              onClick={() => scrollToSection("contact")}
               className="text-foreground/80 hover:text-foreground transition-colors"
             >
               Contact
@@ -61,7 +60,11 @@ const Navigation = ({ isDarkMode, toggleDarkMode }: NavigationProps) => {
             onClick={toggleDarkMode}
             className="hover:bg-accent"
           >
-            {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            {isDarkMode ? (
+              <Sun className="h-5 w-5" />
+            ) : (
+              <Moon className="h-5 w-5" />
+            )}
           </Button>
         </div>
       </div>
