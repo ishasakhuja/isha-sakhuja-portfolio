@@ -15,8 +15,7 @@ const Contact = () => {
   });
   const { toast } = useToast();
 
-  // const API = import.meta.env.VITE_API_URL || "http://localhost:5000";
-  const API = "https://your-backend-service.onrender.com";
+  const API = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
